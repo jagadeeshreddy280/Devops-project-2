@@ -45,7 +45,7 @@ sh  "cat app.yaml"
 sh  "git add app.yaml"
 sh  "git commit -m 'update the dockerimage with new tag:${IMAGE_TAG}'"
 withCredentials([gitUsernamePassword(credentialsId: 'Gitlogin', gitToolName: 'Default')]) {
-    sh  "git push git@github.com:jagadeesh/Devops-project-2s.git HEAD:main"
+    sh  "git push git@github.com:jagadeeshreddy280/Devops-project-2.git HEAD:main"
 }
 }
 }
