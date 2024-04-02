@@ -4,8 +4,11 @@ Deploy an Application on EKS using CI/CD
 pre-requisite:-
 ---
 cloud platform : AWS(IAM,EKS,VPC)
+
 SCM : Github
+
 CI/CD : Jenkins
+
 Container platform : DockerHub
 
 kubectl 
