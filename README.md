@@ -8,6 +8,22 @@ SCM : Github
 CI/CD : Jenkins
 Container platform : DockerHub
 
+kubectl 
+---
+curl -LO https://storage.googleapis.com/kubernetes-release/release/`curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt`/bin/linux/amd64/kubectl
+
+chmod +x ./kubectl
+
+sudo mv ./kubectl /usr/local/bin/kubectl
+
+kubectl version
+
+aws eks update-kubeconfig --region us-east-1 --name EKScluster
+
+o/p:Client Version: v1.29.1
+    Kustomize Version: v5.0.4-0.20230601165947-6ce0bf390ce3
+    Server Version: v1.29.0-eks-c417bb3
+    
 jenkins installation:
 ---
 ubuntu ec2: https://pkg.jenkins.io/debian-stable/
