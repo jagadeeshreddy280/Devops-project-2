@@ -1,6 +1,13 @@
 # Devops-project-2
 Deploy an Application on EKS using CI/CD
 
+Any Queries related
+---
+Gmail : jagadeeshbhavanam@gmail.com
+---
+linkedin : https://www.linkedin.com/in/bhavanam-jagadeeswara-reddy-1b85801b6
+---
+
 pre-requisite:-
 ---
 cloud platform : AWS(IAM,EKS,VPC)
