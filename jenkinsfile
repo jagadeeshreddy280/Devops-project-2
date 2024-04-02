@@ -36,6 +36,20 @@ steps{
 sh 'docker push jagadeesh/dockerpipeline:${BUILD_NUMBER}'
  }
  }
+stage('update in git'){
+steps{
+script{
+sh  "cat app.yaml"
+sh  "sed -i 's+jagadeesh/dockerpipeline.*+jagadeesh/dockerpipeline:${BUILD_NUMBER}\"+g' app.yaml"
+sh  "cat app.yaml"
+sh  "git add app.yaml"
+sh  "git commit -m 'update the dockerimage with new tag:${IMAGE_TAG}'"
+withCredentials([gitUsernamePassword(credentialsId: 'Gitlogin', gitToolName: 'Default')]) {
+    sh  "git push git@github.com:jagadeesh/Devops-project-2s.git HEAD:main"
+}
+}
+}
+}
 stage('Deploy to k8s'){
 steps{
     sshagent(['k8s']) {
