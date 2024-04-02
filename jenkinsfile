@@ -12,7 +12,7 @@ environment {
 stages{
 stage('GIT'){
 steps{
- checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'Gitlogin',url: 'https://github.com/jagadeeshreddy280/jenkins-docker.git']]]) 
+ checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'Gitlogin',url: 'https://github.com/jagadeeshreddy280/onlinebookstore.git']]]) 
 }
 }
 stage('Build'){
