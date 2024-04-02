@@ -1,0 +1,54 @@
+Build Dockerfile --> push to DockerHub --> Deploy on EKS
+
+pipeline{
+agent any
+ tools{
+maven 'maven-3'
+}
+environment {
+		DOCKERHUB_CREDENTIALS=credentials('dockerhublogin')
+}
+stages{
+stage('GIT'){
+steps{
+ checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/jagadeeshreddy280/jenkins-docker.git']]]) 
+}
+}
+stage('Build'){
+ steps{
+sh 'mvn clean install package'
+}
+}
+stage('Docker Image Build'){
+steps{
+sh 'docker build -t jagadeesh/dockerpipeline:2.0 .'
+}
+}
+stage('Login') {
+
+			steps {
+				sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'
+			}
+		}
+stage('Push to Dockerhub'){
+steps{
+sh 'docker push jagadeesh/dockerpipeline:2.0'
+ }
+ }
+stage('Deploy to k8s'){
+steps{
+    sshagent(['k8s']) {
+        sh "scp -o StrictHostKeyChecking=no nodejsapp.yaml ec2-user@13.232.170.209:/home/ec2-user"
+       script{
+            try{
+                sh "ssh ec2-user@13.232.170.209 kubectl apply -f ."
+            }
+            catch(error){
+                //sh "ssh ec2-user@3.108.215.230 kubectl create -f ."
+            }
+        }
+}
+}
+}
+}
+}
