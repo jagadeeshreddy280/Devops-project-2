@@ -53,7 +53,7 @@ withCredentials([gitUsernamePassword(credentialsId: 'Gitlogin', gitToolName: 'De
 stage('Deploy to k8s'){
 steps{
     sshagent(['k8s']) {
-        sh "scp -o StrictHostKeyChecking=no nodejsapp.yaml ec2-user@13.232.170.209:/home/ec2-user"
+        sh "scp -o StrictHostKeyChecking=no app.yaml ec2-user@13.232.170.209:/home/ec2-user"
        script{
             try{
                 sh "ssh ec2-user@13.232.170.209 kubectl apply -f ."
