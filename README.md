@@ -62,7 +62,9 @@ aws eks update-kubeconfig --region us-east-1 --name EKScluster
 ```
 
 o/p:Client Version: v1.29.1
+
     Kustomize Version: v5.0.4-0.20230601165947-6ce0bf390ce3
+    
     Server Version: v1.29.0-eks-c417bb3
     
 jenkins installation:
