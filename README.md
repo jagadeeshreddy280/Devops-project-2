@@ -1,11 +1,8 @@
 # Devops-project-2
-Deploy an Application on EKS using CI/CD
+![Eks-ci_cd](https://github.com/jagadeeshreddy280/Devops-project-2/assets/116871383/6b4a3bf2-22cc-49a5-8078-c27b8aa12e81)
 
-Any Queries related
----
-Gmail : jagadeeshbhavanam@gmail.com
----
-linkedin : https://www.linkedin.com/in/bhavanam-jagadeeswara-reddy-1b85801b6
+
+Deploy an Application on EKS using CI/CD
 ---
 
 pre-requisite:-
@@ -87,4 +84,9 @@ OnlineBookStore Application :
 ---
 https://github.com/jagadeeshreddy280/onlinebookstore.git
 
-
+Any Queries related
+---
+Gmail : jagadeeshbhavanam@gmail.com
+---
+linkedin : https://www.linkedin.com/in/bhavanam-jagadeeswara-reddy-1b85801b6
+---
