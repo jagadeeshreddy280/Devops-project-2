@@ -18,6 +18,28 @@ Container platform : DockerHub
 
 Infrastructure : Terraform
 
+Terraform Installation:
+---
+```
+curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
+
+sudo apt-add-repository "deb [arch=$(dpkg --print-architecture)] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
+
+sudo apt update
+
+sudo apt install terraform
+```
+AWS cli
+---
+```
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+```
+```
+unzip awscliv2.zip
+```
+```
+sudo ./aws/install --update
+```
 kubectl 
 ---
 curl -LO https://storage.googleapis.com/kubernetes-release/release/`curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt`/bin/linux/amd64/kubectl
