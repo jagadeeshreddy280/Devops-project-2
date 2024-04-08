@@ -77,13 +77,20 @@ ubuntu ec2: https://pkg.jenkins.io/debian-stable/
 linux ec2: https://www.jenkins.io/doc/tutorials/tutorial-for-installing-jenkins-on-AWS/
 
 Step 3:
-opening jenkins web
 ---
-localhost:8080
+1.Copy Terraform code from Github.
+
+2.Modifie VPC,Subnets & Nodes accordingly.
+
+3.Terraform init --> Terraform Plan --> Terraform apply.
+
+4.EKS Cluster will create after 15 min.
+
+
 
 Step 4:
 ---
-Install jenkins,Docker,git
+Install Docker,git
 
 Docker 
 ```
@@ -178,7 +185,7 @@ Step 6:
 ---
 Go to pipeline --> Take jenkinsfile from github --> build
 
-
+Step 7:
 OnlineBookStore Application :
 ---
 https://github.com/jagadeeshreddy280/onlinebookstore.git
