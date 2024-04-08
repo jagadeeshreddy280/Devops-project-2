@@ -76,24 +76,12 @@ ubuntu ec2: https://pkg.jenkins.io/debian-stable/
 
 linux ec2: https://www.jenkins.io/doc/tutorials/tutorial-for-installing-jenkins-on-AWS/
 
-java Need to Install:
----
-sudo apt-get update
-
-sudo apt install openjdk-11-jdk
-
-java --version
-
-sudo mkdir jenkins
-
-sudo chmod 777 -R jenkins
-
 Step 3:
 opening jenkins web
 ---
 localhost:8080
 
-Step 5:
+Step 4:
 ---
 Install jenkins,Docker,git
 
