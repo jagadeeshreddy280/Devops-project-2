@@ -18,6 +18,7 @@ Container platform : DockerHub
 
 Infrastructure : Terraform
 
+Step 1:
 Terraform Installation:
 ---
 ```
@@ -67,7 +68,8 @@ o/p:
     Kustomize Version: v5.0.4-0.20230601165947-6ce0bf390ce3
     
     Server Version: v1.29.0-eks-c417bb3
-    
+
+Step 2:    
 jenkins installation:
 ---
 ubuntu ec2: https://pkg.jenkins.io/debian-stable/
@@ -86,10 +88,83 @@ sudo mkdir jenkins
 
 sudo chmod 777 -R jenkins
 
+Step 3:
 opening jenkins web
 ---
 localhost:8080
 
+Step 5:
+---
+Install jenkins,Docker,git
+
+Docker 
+```
+sudo apt install docker.io
+```
+Enableing the docker on ec2
+```
+sudo systemctl enable docker
+```
+Starting the docker on ec2
+```
+sudo systemctl start docker
+```
+Checking the status of docker 
+```
+sudo systemctl status docker
+```
+Checking the status of jenkins
+```
+sudo systemctl status jenkins
+```
+```
+sudo apt-get update
+```
+Need to install java latest version
+```
+sudo apt install openjdk-11-jdk
+```
+```
+java --version
+```
+<img width="615" alt="Screenshot 2024-04-05 113946" src="https://github.com/jagadeeshreddy280/Devops-project-1/assets/116871383/20d144be-a017-4463-90f2-3d0f5f7de128">
+
+
+Grant permission for docker 
+```
+sudo chmod 666 /var/run/docker.sock
+```
+
+copy publicip:8080 on browser 
+```
+  username: admin
+  
+  password: cat /var/lib/jenkins/secrets/initialAdminPassword
+```
+![image](https://github.com/jagadeeshreddy280/Devops-project-1/assets/116871383/147aac4f-57af-4246-aeea-9ee087e03a47)
+
+Add Cred in jenkins:
+---
+1.Go to settings-->developer settings-->token-->new token (tick all boxes) -->create
+ 
+2.Copy token use as password
+Jenkins: ghp_Lmxn7epc
+
+<img width="934" alt="Screenshot 2024-04-05 140534" src="https://github.com/jagadeeshreddy280/Devops-project-1/assets/116871383/3db5cc4e-ad9a-425b-b162-d6fa6ff4b577">
+
+
+3.Save Git & Docker & nomad token in Jenkins
+
+4.Go to Manage jenkins --> click Manage Credentials --> click system
+
+![image](https://github.com/jagadeeshreddy280/Devops-project-1/assets/116871383/4ca28177-15e9-4b38-9426-8cc93e16f1c8)
+
+
+5.Go to Global credentials (unrestricted) --> Add cred
+
+![image](https://github.com/jagadeeshreddy280/Devops-project-1/assets/116871383/318641d8-06e8-483d-8cc4-7641054dfb01)
+
+Step 4:
 Trigger jenkins job automatically whenever any changes in GitHub:-
 ---
 IN GITHUB:
