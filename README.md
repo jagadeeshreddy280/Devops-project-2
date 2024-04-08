@@ -59,7 +59,7 @@ kubectl version
 ```
 ```
 aws eks update-kubeconfig --region us-east-1 --name EKScluster
-```
+
 
 o/p:Client Version: v1.29.1
 
