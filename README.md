@@ -22,11 +22,14 @@ Terraform Installation:
 ---
 ```
 curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
-
+```
+```
 sudo apt-add-repository "deb [arch=$(dpkg --print-architecture)] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
-
+```
+```
 sudo apt update
-
+```
+```
 sudo apt install terraform
 ```
 AWS cli
@@ -42,15 +45,21 @@ sudo ./aws/install --update
 ```
 kubectl 
 ---
+```
 curl -LO https://storage.googleapis.com/kubernetes-release/release/`curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt`/bin/linux/amd64/kubectl
-
+```
+```
 chmod +x ./kubectl
-
+```
+```
 sudo mv ./kubectl /usr/local/bin/kubectl
-
+```
+```
 kubectl version
-
+```
+```
 aws eks update-kubeconfig --region us-east-1 --name EKScluster
+```
 
 o/p:Client Version: v1.29.1
     Kustomize Version: v5.0.4-0.20230601165947-6ce0bf390ce3
