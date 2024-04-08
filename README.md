@@ -117,6 +117,8 @@ Copy token use as password Jenkins: ghp_Lmxn7epc
 
 OnlineBookStore Application :
 ---
+https://github.com/jagadeeshreddy280/onlinebookstore.git
+
 Check Application pods & service are Running
 ```
 kubectl get all -n app
@@ -146,7 +148,7 @@ copy service url in google u can access it.
 ![image](https://github.com/jagadeeshreddy280/Observability-setup/assets/116871383/457685e9-b172-4806-8f8e-aa79fb785c01)
 
 
-https://github.com/jagadeeshreddy280/onlinebookstore.git
+
 
 
 Any Queries related
