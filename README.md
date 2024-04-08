@@ -152,30 +152,31 @@ Jenkins: ghp_Lmxn7epc
 
 ![image](https://github.com/jagadeeshreddy280/Devops-project-1/assets/116871383/318641d8-06e8-483d-8cc4-7641054dfb01)
 
-Step 4:
+Step 5:
 Trigger jenkins job automatically whenever any changes in GitHub:-
 ---
+
 IN GITHUB:
 
-Go to repository
+1. Go to repository
 
-Inside repo --> settings -->click webhooks -->click add webhooks
+2. Inside repo --> settings -->click webhooks -->click add webhooks
 
-Copy Jenkins url like http://2.33.344.44:8080 and Add /github-webhook/
+3. Copy Jenkins url like http://2.33.344.44:8080 and Add /github-webhook/
 
-Example: http://35.154.114.196:8080/github-webhook/
+ Example:
+```
+http://35.154.114.196:8080/github-webhook/
+```
+4.	Add in Payload URL --> save it.
 
-Add in Payload URL --> save it.
+5.	Change anything or push any file into git repo we can see job is triggered automatically.
 
-Change anything or push any file into git repo we can see job is triggered automatically.
+<img width="854" alt="Screenshot 2024-04-05 113646" src="https://github.com/jagadeeshreddy280/Devops-project-1/assets/116871383/b95749f9-5b65-4eb5-8e2d-bec46f53b3fa">
 
-NOTE: Save Git & Docker  in Jenkins
-
-Go to Manage Jenkins --> Credentials --> Add New Credentials ** Need to connect Github to jenkins:
-
-Go to settings-->developer settings-->token-->new token (tick all boxes) -->create
-
-Copy token use as password Jenkins: ghp_Lmxn7epc
+Step 6:
+---
+Go to pipeline --> Take jenkinsfile from github --> build
 
 
 OnlineBookStore Application :
